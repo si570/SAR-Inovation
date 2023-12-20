@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
+    <title>⚡️ SAR Innovation - About Page</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        ⚡️ SAR Innovation
+    </header>
+
+    <!-- Video container with a looping background video (dosent work) --> 
+    <div class="video-container">
+        <video autoplay muted loop src id="background-video">
+            <source src="background-video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Main content section -->
+    <div class="content">
+        <!-- Section for drone information -->
+        <section>
+            <!-- Container for drone content -->
+            <div id="droneContent">
+                <!-- Drone image with alt text -->
+                <img id="droneImage" src="drone.jpg" alt="Awesome Drone Pro">
+                <!-- Heading for drone features -->
+                <h2>Features:</h2>
+                <!-- Unordered list for drone features -->
+                <ul>
+                    <li>4K Camera with Gimbal</li>
+                    <li>GPS Navigation</li>
+                    <li>Long Battery Life</li>
+                    <li>Obstacle Avoidance System</li>
+                </ul>
+
+                <!-- Description of the drone -->
+                <p>The Awesome Drone Pro is packed with advanced features to provide an exceptional flying experience.
+                    Whether you're a professional photographer or a hobbyist, this drone is perfect for capturing
+                    stunning aerial shots.</p>
+
+                <!-- Price information -->
+                <h3>Price: $999</h3>
+                <!-- Button to show the purchase form -->
+                <button id="buyButton" onclick="showPurchaseForm()">Buy Now</button>
+
+                <!-- Navigation buttons -->
+                <button id="basketButton" onclick="goToBasket()">Basket</button>
+                <button id="homeButton" onclick="goToHome()">Home</button>
+
+                <!-- Purchase form with input fields -->
+                <form id="purchaseForm" style="display:none;">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                    <label for="address">Shipping Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your Address" required>
+
+                    <!-- Button to submit the purchase form -->
+                    <button id="submitBtn" onclick="submitForm()">Submit</button>
+                </form>
+            </div>
+
+            <!-- Aside section for advertisements -->
+            <aside>
+                <!-- Advertisement 1 -->
+                <div class="ad">
+                    <img src="ad1.jpg" alt="Advertisement 1">
+                </div>
+
+                <!-- Advertisement 2 -->
+                <div class="ad">
+                    <img src="ad2.jpg" alt="Advertisement 2">
+                </div>
+            </aside>
+        </section>
+    </div>
+
+    <!-- JavaScript section with functions for interaction -->
+    <script>
+        // Function to show the purchase form
+        function showPurchaseForm() {
+            document.getElementById('buyButton').style.display = 'none';
+            document.getElementById('purchaseForm').style.display = 'block';
+        }
+
+        // Function to submit the purchase form
+        function submitForm() {
+            alert("Thank you for your purchase, " + document.getElementById('name').value +
+                "! Your drone will be shipped to " + document.getElementById('address').value + " soon.");
+        }
+
+        // Function to navigate to the basket page
+        function goToBasket() {
+            alert("Redirecting to the basket page...");
+            // Add code to navigate to the basket page
+        }
+
+        // Function to navigate to the home page
+        function goToHome() {
+            alert("Redirecting to the home page...");
+            // Add code to navigate to the home page
+        }
+    </script>
+
+</body>
+
+</html>
